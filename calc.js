@@ -1,25 +1,15 @@
-let screen= document.getElementById(`screen`);
-buttons=document.querySelectorAll(`button`);
-let screenValue=``;
-for(item of buttons){
-    item.addEventListener(`click`,(e)=>{
-        buttonText=e.target.innerText;
-        console.log(`Button text is`,buttonText);
-        if(buttonText==`X`){
-            buttonText=`*`;
-            screenValue += buttonText;
-            screen.value = screenValue;            
-        }
-        else if (buttonText==`C`){
-            screenValue = "";
-            screen.value = screenValue;
-        }
-        else if (buttonText==`=`){
-            screen.value = eval(screenValue);
-        }
-        else{
-            screenValue += buttonText;
-            screen.value = screenValue;
-        }
-    })
+function calc(opt){
+    var a = document.getElementById("first").value;
+    var b = document.getElementById("second").value;
+    var out;
+    if(opt == "add"){
+        out = `Sum is ${Number(a)+Number(b)}`;
+    }else if(opt == "sub"){
+        out = `Sub is ${Number(a)-Number(b)}`;
+    }else if(opt == "multiply"){
+        out = `Multiplication is ${Number(a)*Number(b)}`;
+    }else{
+        out = `Division is ${Number(a)/Number(b)}`;
+    }
+    document.getElementById("output").innerText=out
 }

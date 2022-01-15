@@ -1,33 +1,15 @@
 body{
     margin:auto;
-    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgb(165, 197, 235) 100%);
+    background: #FFEFBA;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFFFFF, #FFEFBA);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFFFFF, #FFEFBA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-.container{
-    text-align:center;
-    margin-top:23px;
+strong{
+    margin-left: 44%;
 }
 
-input{
-    font-size:34px;
-    border:5px solid gray;
-    border-radius:21px;
-    height:70px;
-    width:456px;
-}
-button{
-    font-size:40px;
-    background-color:chartreuse;
-    width:102px;
-    height:90px;
-    border-radius: 17px;
-    margin: 6px;
-}
-
-.calculator{
-    display:inline-block;
-    background-color:#126E82;
-    padding:23px;
-    border-radius:53px;
-    border:5px solid gray;
+#output{
+    font-weight: bolder;
+    line-height:30px;
 }
